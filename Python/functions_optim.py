@@ -386,8 +386,8 @@ def GD(estim_param, tree, penalties, statistic="LTT",eps=0.001, threshold=0.01, 
         diff=torch.norm(torch.cat([a_list[-1]-a_list[-2], b_list[-1]-b_list[-2] ]))
         if diff < eps :
             count +=1
-            print("diff : ", diff)
-            print("count : ", count)
+            #print("diff : ", diff)
+            #print("count : ", count)
         else :
             count=0
 
@@ -404,9 +404,9 @@ def GD(estim_param, tree, penalties, statistic="LTT",eps=0.001, threshold=0.01, 
             break
         
         #if i%30==0 : 
-        print("diff : ", diff)
-        print("iteration : ", i, " ; mses : ", loss.item())
-        print("Gradient Norm : ", grad_norm.item())
+        #print("diff : ", diff)
+        #print("iteration : ", i, " ; mses : ", loss.item())
+        #print("Gradient Norm : ", grad_norm.item())
         
         if stop : 
             break
